@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+:root {
+  /* Primary */
+  --clr-Cyan: hsl(179, 62%, 43%);
+  --clr-Bright-Yellow: hsl(71, 73%, 54%);
+  /* Neutral */
+  --clr-Light-Gray: hsl(204, 43%, 93%);
+  --clr-Grayish-Blue: hsl(218, 22%, 67%);
+  --ff-base: "Karla", sans-serif;
+  --fw-regular: 400;
+  --fw-semiBold: 700;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1.2;
+  min-height: 100vh;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  grid-template-rows: auto;
+  grid-template-columns: 650px;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  background-color: var(--clr-Light-Gray);
+  color: hsl(0deg, 0%, 100%);
+}
+
+.card-container {
+  background-color: hsl(0deg, 0%, 100%);
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.8fr 1fr;
+  grid-template-areas: "topCard topCard" "leftBottomCard rightBottomCard";
+  --padding-card: 2.2rem;
+  border-radius: 0.8rem;
+  box-shadow: 1px 5px 14px 5px rgba(167, 167, 167, 0.53);
+  overflow: auto;
+}
+.card-container h2 {
+  font-weight: var(--fw-semiBold);
+}
+
+.top-card {
+  grid-area: topCard;
+  padding: var(--padding-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.top-card h1 {
+  margin-bottom: 1rem;
+}
+.top-card p:nth-child(2) {
+  color: var(--clr-Bright-Yellow);
+  font-weight: var(--fw-semiBold);
+}
+.top-card p:nth-child(3) {
+  color: var(--clr-Grayish-Blue);
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: var(--fw-semiBold);
+  color: var(--clr-Cyan);
+}
+
+.left-bottom-card {
+  grid-area: leftBottomCard;
+  background-color: var(--clr-Cyan);
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-card);
+  gap: 0.2rem;
+}
+.left-bottom-card h2 {
+  margin-bottom: 0.8rem;
+}
+.left-bottom-card p {
+  color: hsl(180deg, 76%, 81%);
+}
+
+.right-bottom-card {
+  grid-area: rightBottomCard;
+  background-color: hsl(178deg, 48%, 52%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  line-height: 1.4;
+  padding: var(--padding-card);
+  padding-right: 7.2rem;
+}
+.right-bottom-card p {
+  color: hsl(181deg, 75%, 85%);
+  font-size: 0.9rem;
+}
+
+.price-plan {
+  font-size: 2rem;
+  font-weight: var(--fw-semiBold);
+  display: flex;
+  align-items: center;
+}
+.price-plan span {
+  margin-left: 1rem;
+  font-size: 1rem;
+  font-weight: var(--fw-regular);
+  color: hsl(181deg, 75%, 85%);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: var(--clr-Bright-Yellow);
+  color: inherit;
+  width: 100%;
+  margin-top: auto;
+  font-weight: var(--fw-semiBold);
+  padding-block: 1rem;
+  border-radius: 0.3rem;
+  box-shadow: 1px 4px 17px 0px rgba(105, 105, 105, 0.33);
+}
+
+@media (max-width: 680px) {
+  .card-container {
+    grid-template-columns: 350px;
+    grid-template-rows: 1.1fr 1fr 1fr;
+    grid-template-areas: "topCard" "leftBottomCard" "rightBottomCard";
+  }
+}/*# sourceMappingURL=style.css.map */
